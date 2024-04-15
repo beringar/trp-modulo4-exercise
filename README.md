@@ -1,21 +1,10 @@
 # checkCombination of valid pairs
 
-1. Realiza el siguiente ejercicio en TDD:
+## 1. Realiza el siguiente ejercicio en TDD:
 
 Construir una función que reciba un string y compruebe si contiene la combinación y orden correctos de paréntesis, corchetes y llaves.
 
-Input: string
-Output: boolean
-Ejemplos de casos de uso:
-
-"[({[]})]" --> Retorna true
-"()" --> Retorna true
-"" --> Retorna true
-"[{}" --> Retorna false
-"([)]" --> Retorna false
-Antes de comenzar a picar, pregúntate cuál es la mejor estructura de datos, teniendo en cuenta su eficiencia y complejidad algorítmica.
-
-Big O of my solution:
+### Big O of my solution:
 
 The time complexity of the checkCombination function is O(n), where n is the length of the input string combination. Here's why:
 
@@ -23,9 +12,9 @@ The function iterates over the string combination from the start to the middle, 
 The lookup in the validPairs object is a constant time operation, O(1), because object property access time in JavaScript does not depend on the size of the object.
 So, the overall time complexity is dominated by the linear iteration over the string, making it O(n).
 
-## Alternative using stack (same complexity but more if/else)
+### Alternative using stack (same complexity but more if/else)
 
-I prefer first approach. Simple and clean.
+I prefer first approach as implemented, using array. Simple and clean.
 
 ```typescript
 export const checkCombinationAlt = (combination: string): boolean => {
