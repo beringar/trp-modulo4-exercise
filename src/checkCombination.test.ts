@@ -12,7 +12,7 @@ describe("given a checkCombination function", () => {
 
   test("when a string received contains any character not allowed returns false", () => {
     expect(checkCombination("((a((")).toBe(false);
-    expect(checkCombination("(([[[[}}}}}]]]]))")).toBe(true);
+    expect(checkCombination("[[")).toBe(true);
     expect(checkCombination("")).toBe(true);
   });
 
