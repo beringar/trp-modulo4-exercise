@@ -19,4 +19,8 @@ describe("given a checkCombination function", () => {
   test("when a string received has odd length ", () => {
     expect(checkCombination("([(")).toBe(false);
   });
+
+  test("when a string received has not the proper combination of open/closed characters returns false", () => {
+    expect(checkCombination("([([")).toBe(false);
+  });
 });
