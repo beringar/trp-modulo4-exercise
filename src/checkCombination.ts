@@ -1,1 +1,1 @@
-export const checkCombination = (): void => {};
+export const checkCombination = (combination: string): void => {};
