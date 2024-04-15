@@ -12,7 +12,7 @@ describe("given a checkCombination function", () => {
 
   test("when a string received contains any character not allowed returns false", () => {
     expect(checkCombination("((a((")).toBe(false);
-    expect(checkCombination("[[")).toBe(true);
+    expect(checkCombination("{}")).toBe(true);
     expect(checkCombination("")).toBe(true);
   });
 
@@ -21,6 +21,8 @@ describe("given a checkCombination function", () => {
   });
 
   test("when a string received has not the proper combination of open/closed characters returns false", () => {
-    expect(checkCombination("([([")).toBe(false);
+    expect(checkCombination("[]")).toBe(true);
+    expect(checkCombination("[()")).toBe(false);
+    expect(checkCombination("abba")).toBe(false);
   });
 });
