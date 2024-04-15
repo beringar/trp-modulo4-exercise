@@ -8,4 +8,7 @@ describe("given a checkCombination function", () => {
   test("when a string is passed as argument returns a boolean", () => {
     expect(typeof checkCombination("((((")).toBe("boolean");
   });
+  test("when a string received contains any character not allowed returns false", () => {
+    expect(checkCombination("((a((")).toBe(false);
+  });
 });
