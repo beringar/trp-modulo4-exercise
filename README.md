@@ -1,17 +1,28 @@
-# TypeScript avanzado
+# checkCombination of valid pairs
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" width="200">
+1. Realiza el siguiente ejercicio en TDD:
 
-## Template para los ejercicios del curso
+Construir una función que reciba un string y compruebe si contiene la combinación y orden correctos de paréntesis, corchetes y llaves.
 
-Aquí tienes un template base para empezar los ejercicios. Ya tiene TS y ESLint instalados y configurados, recuerda que lo primero que tienes que hacer es `npm install`.
+Input: string
+Output: boolean
+Ejemplos de casos de uso:
 
-Éstos son los scripts que puedes lanzar:
+"[({[]})]" --> Retorna true
+"()" --> Retorna true
+"" --> Retorna true
+"[{}" --> Retorna false
+"([)]" --> Retorna false
+Antes de comenzar a picar, pregúntate cuál es la mejor estructura de datos, teniendo en cuenta su eficiencia y complejidad algorítmica.
 
-`npm run build`: compilará de TS a JS y lo guardará en la carpeta `dist`
+Big O of my solution:
 
-`npm run build:dev`: hará lo mismo que el anterior, pero se quedará esperando cambios para volver a compilar
+The time complexity of the checkCombination function is O(n), where n is the length of the input string combination. Here's why:
 
-`npm start`: ejecutará el archivo `index.js` de la carpeta `dist`
+The function iterates over the string combination from the start to the middle, which is a linear operation, hence O(n).
+The lookup in the validPairs object is a constant time operation, O(1), because object property access time in JavaScript does not depend on the size of the object.
+So, the overall time complexity is dominated by the linear iteration over the string, making it O(n).
 
-`npm run start:dev`: hará lo mismo que el anterior, pero se quedará esperando cambios para volver a ejecutar
+2. En un comentario del código o un archivo README, justifica la elección de la estructura de datos y responde y argumenta la siguiente pregunta: en JavaScript, ¿qué tipo de estructura de datos son los Arrays?
+
+TBD
